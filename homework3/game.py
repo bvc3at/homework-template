@@ -32,7 +32,7 @@ def shuffle_field():
     for i in range(1000):
         try:
             # emulate allowed random moves, so it's always be solvable
-            rand_key = allowed_moves[random.randint(0, len(allowed_moves) - 1)]
+            rand_key = random.choice(allowed_moves)
             field = perform_move(field, rand_key)
         except IndexError:
             pass
